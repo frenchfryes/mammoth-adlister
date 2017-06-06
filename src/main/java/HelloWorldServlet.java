@@ -8,16 +8,16 @@ import java.io.PrintWriter;
 public class HelloWorldServlet extends HttpServlet {
 
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
 
-           //usually header
-            response.setContentType("text/html");
-            PrintWriter out = response.getWriter();
+        PrintWriter out = res.getWriter();
 
-            //body
-            out.println("<h1>Hello, World!</h1>");
-            out.println("This is an example");
+        String name = req.getParameter("name");
+        if (name == null) {
+            out.println("<h1>Hello world</h1>");
+        } else {
+            out.printf("<h1>Hello %s </h1>", name);
         }
-
     }
 
+}

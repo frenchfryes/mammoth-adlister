@@ -4,8 +4,9 @@
 
 <%@include file="/partials/head.jsp" %>
 
-<body class="container">
+<body>
 <%@include file="/partials/navbar.jsp" %>
+<div class="container">
 <div class="row">
     <div class="col-lg-6">
         It's nice to see you again.
@@ -14,6 +15,8 @@
         Second Text
     </div>
 </div>
+</div>
+<%@include file="/partials/footer.jsp" %>
 <%@include file="/partials/scripts.jsp" %>
 </body>
 </html>
